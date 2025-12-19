@@ -1,0 +1,3 @@
+# Libraries for FCC
+pytest
+ruff
