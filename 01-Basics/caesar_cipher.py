@@ -10,8 +10,7 @@ def caesar(text, shift):
 
     #using the translate () funtion to return a copy of the original string 
     #where the characters have been replaced based on the translation table
-    encrypted_text = text.translate(translation_table)
-    print(encrypted_text)
+    return text.translate(translation_table)
 
 #caesar function call
-caesar('hello world',5)
+print(caesar('hello world',5))
