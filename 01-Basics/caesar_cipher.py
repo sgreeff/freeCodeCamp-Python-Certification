@@ -1,6 +1,6 @@
 """freecodecamp.org worshop - Build a Caesar Cipher """
 
-def caesar(text, shift):
+def caesar(text, shift, encrypt = True):
     if not isinstance(shift, int):
         #validation for shift to be an integer
         return 'Shift must be an integer value.'
