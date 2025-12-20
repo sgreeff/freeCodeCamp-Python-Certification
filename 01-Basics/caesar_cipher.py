@@ -4,9 +4,9 @@ def caesar(text, shift):
     if not isinstance(shift, int):
         #validation for shift to be an integer
         return 'Shift must be an integer value.'
-    elif shift < 1:
-        #validation for shift to be postive
-        return 'Shift must be a positive integer.'
+    elif shift < 1 or shift > 25:
+        #validation for shift to be postive or must be less than the 25 alphabet characters condition
+        return 'Shift must be an integer between 1 and 25.'
     else:
         #alphabet shifting logic using list slicing
         alphabet = 'abcdefghijklmnopqrstuvwxyz'
