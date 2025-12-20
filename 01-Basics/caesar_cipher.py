@@ -1,7 +1,7 @@
 """freecodecamp.org worshop - Build a Caesar Cipher """
 
 def caesar(text, shift):
-    if isinstance(shift, int):
+    if not isinstance(shift, int):
         return 'Shift must be an integer value.'
     #alphabet shifting logic using list slicing
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
