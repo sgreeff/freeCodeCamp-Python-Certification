@@ -8,8 +8,12 @@ def caesar(text, shift, encrypt = True):
         #validation for shift to be postive or must be less than the 25 alphabet characters condition
         return 'Shift must be an integer between 1 and 25.'
     else:
-        #alphabet shifting logic using list slicing
         alphabet = 'abcdefghijklmnopqrstuvwxyz'
+        if encrypt != True:
+            #determine if the function should encrypt the text passed to it (default behavior, encrypt=True), or if it should decrypt an encrypted message.
+            shift = - shift   
+
+        #alphabet shifting logic using list slicing    
         shifted_alphabet = alphabet[shift:] + alphabet[0:shift]
 
         #character mapping using str.maketrans for optimised translation
