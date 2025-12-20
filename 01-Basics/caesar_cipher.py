@@ -23,5 +23,12 @@ def caesar(text, shift, encrypt = True):
         #where the characters have been replaced based on the translation table
         return text.translate(translation_table)
 
+#encrypt and decrypt wrapper functions
+def encrypt(text, shift):
+    return caesar(text, shift)
+
+def decrypt(text, shift):
+    return caesar(text, shift, False)
+
 #caesar function call
 print(caesar('hello world',5))
