@@ -37,3 +37,12 @@ print(encrypt('hello world',5)) #Output: mjqqt btwqi
 encrypted_text = 'Pbhentr vf sbhaq va hayvxryl cynprf.'
 decrypted_text = decrypt(encrypted_text, 13)
 print(decrypted_text) #Output: Courage is found in unlikely places.
+
+"""
+A tiny "Teacher Note" on the Decrypt Logic
+I noticed the logic for negative shifts: alphabet[shift:] + alphabet[0:shift]
+
+When shift becomes -13 (for decryption), Python handles this beautifully. alphabet[-13:] 
+grabs the last 13 letters, and alphabet[0:-13] grabs everything but the last 13. It is a 
+very elegant way to reverse the cipher without needing extra if statements!
+"""
