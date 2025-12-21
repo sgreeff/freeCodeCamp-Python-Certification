@@ -17,4 +17,8 @@ def create_character(character_name, strength, intelligence, charisma):
     if strength > 4 or intelligence > 4 or charisma > 4:
         return 'All stats should be no more than 4'
     
+    sum_of_stats = strength + intelligence + charisma
+    if sum_of_stats > 7 or sum_of_stats < 7:
+        return 'The character should start with 7 points'
+
     
