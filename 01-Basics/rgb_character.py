@@ -10,4 +10,11 @@ def create_character(character_name, strength, intelligence, charisma):
         return 'The character name is too long'
     if " " in character_name:
         return 'The character name should not contain spaces'
+    if not isinstance(strength,int) or not isinstance(intelligence,int) or not isinstance(charisma,int):
+        return 'All stats should be integers'
+    if strength < 1 or intelligence < 1 or charisma < 1:
+        return 'All stats should be no less than 1'
+    if strength > 4 or intelligence > 4 or charisma > 4:
+        return 'All stats should be no more than 4'
+    
     
