@@ -30,5 +30,10 @@ def encrypt(text, shift):
 def decrypt(text, shift):
     return caesar(text, shift, False)
 
-#caesar function call
-print(caesar('hello world',5))
+#encrypt function call
+print(encrypt('hello world',5)) #Output: mjqqt btwqi
+
+#decrypt function call
+encrypted_text = 'Pbhentr vf sbhaq va hayvxryl cynprf.'
+decrypted_text = decrypt(encrypted_text, 13)
+print(decrypted_text) #Output: Courage is found in unlikely places.
