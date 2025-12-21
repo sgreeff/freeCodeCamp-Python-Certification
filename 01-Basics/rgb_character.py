@@ -21,4 +21,8 @@ def create_character(character_name, strength, intelligence, charisma):
     if sum_of_stats > 7 or sum_of_stats < 7:
         return 'The character should start with 7 points'
 
-    
+    return (
+        f"{character_name}\nSTR {full_dot * strength}{empty_dot * (10 - strength)}\nINT {full_dot*intelligence}{empty_dot* (10 - intelligence)}\nCHA {full_dot*charisma}{empty_dot* (10 - charisma)}"
+    )
+
+print(create_character('ren', 4, 2, 1))
